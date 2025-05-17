@@ -178,8 +178,8 @@ body {
   }
 }
 
-/* Stripe lines */
-.stripe-lines {
+/* Flowing lines */
+.flowing-lines {
   position: fixed;
   top: 0;
   left: 0;
@@ -187,34 +187,72 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: -3;
+  pointer-events: none;
 }
 
-.theme-dark .stripe {
-  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent);
+.flowing-line {
+  animation: flowLine 20s linear infinite;
 }
 
-.theme-light .stripe {
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
-}
-
-.theme-purple .stripe {
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
-}
-
-.stripe {
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  animation: moveLine 8s linear infinite;
-  opacity: 0.3;
-}
-
-@keyframes moveLine {
+@keyframes flowLine {
   0% {
-    transform: translateY(-100%);
+    stroke-dasharray: 0 1500;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 1500 0;
+    stroke-dashoffset: 0;
   }
   100% {
-    transform: translateY(100vh);
+    stroke-dasharray: 1500 0;
+    stroke-dashoffset: -1500;
+  }
+}
+
+/* Glowing orbs */
+.glowing-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -4;
+  pointer-events: none;
+}
+
+.glowing-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite alternate;
+}
+
+.glowing-orb.dark-theme {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.6) 0%, rgba(16, 185, 129, 0) 70%);
+  box-shadow: 0 0 30px 10px rgba(16, 185, 129, 0.3);
+}
+
+.glowing-orb.purple-theme {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0) 70%);
+  box-shadow: 0 0 30px 10px rgba(139, 92, 246, 0.3);
+}
+
+.glowing-orb.light-theme {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0) 70%);
+  box-shadow: 0 0 30px 10px rgba(59, 130, 246, 0.3);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  100% {
+    transform: translate(-30px, 30px) scale(0.9);
   }
 }
 
@@ -240,7 +278,7 @@ body {
 }
 
 .theme-light .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #0ea5e9);
+  background: linear-gradient(to bottom, #3b82f6, #4f46e5);
   border-radius: 10px;
 }
 
@@ -254,7 +292,7 @@ body {
 }
 
 .theme-light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #0284c7);
+  background: linear-gradient(to bottom, #2563eb, #4338ca);
 }
 
 .theme-purple .custom-scrollbar::-webkit-scrollbar-thumb:hover {

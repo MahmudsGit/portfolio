@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { useInView } from "framer-motion"
+import { useTheme } from "@/context/theme-context"
 
 interface CountUpProps {
   end: number
@@ -13,6 +14,13 @@ function CountUp({ end, duration = 2000, suffix = "" }: CountUpProps) {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const { theme } = useTheme()
+
+  const getCountColor = () => {
+    if (theme === "purple") return "text-purple-400"
+    if (theme === "light") return "text-blue-600"
+    return "text-emerald-400"
+  }
 
   useEffect(() => {
     if (!isInView) return
@@ -38,7 +46,7 @@ function CountUp({ end, duration = 2000, suffix = "" }: CountUpProps) {
   }, [end, duration, isInView])
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={getCountColor()}>
       {count}
       {suffix}
     </span>
@@ -46,33 +54,47 @@ function CountUp({ end, duration = 2000, suffix = "" }: CountUpProps) {
 }
 
 export default function Stats() {
+  const { theme } = useTheme()
+
+  const getBorderColor = () => {
+    if (theme === "purple") return "border-gray-800"
+    if (theme === "light") return "border-gray-200"
+    return "border-gray-800"
+  }
+
+  const getTextColor = () => {
+    if (theme === "purple") return "text-gray-400"
+    if (theme === "light") return "text-gray-600"
+    return "text-gray-400"
+  }
+
   return (
-    <section className="py-12 border-y border-gray-800">
+    <section className={`py-12 border-y ${getBorderColor()}`}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-emerald-400">
+            <h3 className="text-4xl md:text-5xl font-bold">
               <CountUp end={3} suffix="+" />
             </h3>
-            <p className="text-gray-400 mt-2">Years of experience</p>
+            <p className={`mt-2 ${getTextColor()}`}>Years of experience</p>
           </div>
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-emerald-400">
+            <h3 className="text-4xl md:text-5xl font-bold">
               <CountUp end={15} suffix="+" />
             </h3>
-            <p className="text-gray-400 mt-2">Projects completed</p>
+            <p className={`mt-2 ${getTextColor()}`}>Projects completed</p>
           </div>
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-emerald-400">
+            <h3 className="text-4xl md:text-5xl font-bold">
               <CountUp end={10} suffix="+" />
             </h3>
-            <p className="text-gray-400 mt-2">Technologies mastered</p>
+            <p className={`mt-2 ${getTextColor()}`}>Technologies mastered</p>
           </div>
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-emerald-400">
+            <h3 className="text-4xl md:text-5xl font-bold">
               <CountUp end={500} suffix="+" />
             </h3>
-            <p className="text-gray-400 mt-2">Code commits</p>
+            <p className={`mt-2 ${getTextColor()}`}>Code commits</p>
           </div>
         </div>
       </div>

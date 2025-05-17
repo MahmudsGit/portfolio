@@ -1,6 +1,7 @@
 "use client"
 import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
+import { useTheme } from "@/context/theme-context"
 
 interface TimelineItemProps {
   title: string
@@ -15,12 +16,29 @@ function TimelineItem({ title, company, date, description, icon, isLeft }: Timel
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
   const controls = useAnimation()
+  const { theme } = useTheme()
 
   useEffect(() => {
     if (isInView) {
       controls.start("visible")
     }
   }, [isInView, controls])
+
+  const getAccentColor = () => {
+    if (theme === "purple") return "text-purple-400"
+    if (theme === "light") return "text-blue-600"
+    return "text-emerald-400"
+  }
+
+  const getTextColor = () => {
+    if (theme === "light") return "text-gray-700"
+    return "text-white"
+  }
+
+  const getSecondaryTextColor = () => {
+    if (theme === "light") return "text-gray-500"
+    return "text-gray-400"
+  }
 
   return (
     <motion.div
@@ -35,18 +53,21 @@ function TimelineItem({ title, company, date, description, icon, isLeft }: Timel
     >
       <div className={`w-1/2 ${isLeft ? "pl-8" : "pr-8"} ${isLeft ? "text-right" : "text-left"}`}>
         <div className={`flex items-center mb-2 ${isLeft ? "justify-end" : "justify-start"}`}>
-          <h4 className="text-xl font-bold text-white">{title}</h4>
+          <h4 className={`text-xl font-bold ${getTextColor()}`}>{title}</h4>
         </div>
         <div className={`flex items-center mb-4 ${isLeft ? "justify-end" : "justify-start"}`}>
-          <span className="text-emerald-400 font-medium">{company}</span>
+          <span className={getAccentColor()}>{company}</span>
           <span className="mx-2 text-gray-500">•</span>
-          <span className="text-gray-400">{date}</span>
+          <span className={getSecondaryTextColor()}>{date}</span>
         </div>
         <ul className="space-y-2">
           {description.map((item, index) => (
-            <li key={index} className={`text-gray-300 flex items-start ${isLeft ? "justify-end" : "justify-start"}`}>
+            <li
+              key={index}
+              className={`text-foreground/80 flex items-start ${isLeft ? "justify-end" : "justify-start"}`}
+            >
               {isLeft && <span>{item}</span>}
-              <span className="text-emerald-400 mx-2">•</span>
+              <span className={`${getAccentColor()} mx-2`}>•</span>
               {!isLeft && <span>{item}</span>}
             </li>
           ))}
@@ -57,23 +78,49 @@ function TimelineItem({ title, company, date, description, icon, isLeft }: Timel
 }
 
 export default function Experience() {
+  const { theme } = useTheme()
+
+  const getDotColor = () => {
+    if (theme === "purple") return "bg-purple-400"
+    if (theme === "light") return "bg-blue-500"
+    return "bg-emerald-400"
+  }
+
+  const getLineColor = () => {
+    if (theme === "purple") return "bg-gray-700"
+    if (theme === "light") return "bg-gray-300"
+    return "bg-gray-700"
+  }
+
+  const getHeadingColor = () => {
+    if (theme === "purple") return "text-purple-400"
+    if (theme === "light") return "text-blue-600"
+    return "text-emerald-400"
+  }
+
   return (
     <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-sm uppercase tracking-wider text-emerald-400 mb-2">WHAT I HAVE DONE SO FAR</h2>
+          <h2 className={`text-sm uppercase tracking-wider ${getHeadingColor()} mb-2`}>WHAT I HAVE DONE SO FAR</h2>
           <h3 className="text-4xl md:text-5xl font-bold">Work Experience.</h3>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Center line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
+            <div className={`absolute left-1/2 top-0 bottom-0 w-1 ${getLineColor()} transform -translate-x-1/2`}></div>
 
             {/* Timeline dots */}
-            <div className="absolute left-1/2 top-0 w-5 h-5 rounded-full bg-emerald-400 transform -translate-x-1/2 z-10"></div>
-            <div className="absolute left-1/2 top-1/3 w-5 h-5 rounded-full bg-emerald-400 transform -translate-x-1/2 z-10"></div>
-            <div className="absolute left-1/2 top-2/3 w-5 h-5 rounded-full bg-emerald-400 transform -translate-x-1/2 z-10"></div>
+            <div
+              className={`absolute left-1/2 top-0 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+            ></div>
+            <div
+              className={`absolute left-1/2 top-1/3 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+            ></div>
+            <div
+              className={`absolute left-1/2 top-2/3 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+            ></div>
 
             {/* Experience items */}
             <TimelineItem

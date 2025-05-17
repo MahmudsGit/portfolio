@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { useTheme } from "@/context/theme-context"
 
 type SkillCategory = "frontend" | "backend" | "database" | "tools" | "all"
 
@@ -33,6 +34,7 @@ const skills: Skill[] = [
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>("all")
+  const { theme } = useTheme()
 
   const filteredSkills =
     activeCategory === "all"
@@ -41,13 +43,53 @@ export default function Skills() {
           Array.isArray(skill.category) ? skill.category.includes(activeCategory) : skill.category === activeCategory,
         )
 
+  const getButtonGradient = (isActive: boolean) => {
+    if (theme === "purple") {
+      return isActive
+        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+        : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
+    }
+    if (theme === "light") {
+      return isActive
+        ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+        : "bg-gradient-to-r from-gray-100 to-white text-gray-700 hover:from-gray-200 hover:to-gray-100 border border-gray-200"
+    }
+    return isActive
+      ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white"
+      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
+  }
+
+  const getCardGradient = () => {
+    if (theme === "purple") return "from-[#1a1a24] to-[#252532]"
+    if (theme === "light") return "from-white to-gray-50 border border-gray-200"
+    return "from-[#1a1a24] to-[#252532]"
+  }
+
+  const getSkillCardGradient = () => {
+    if (theme === "purple") return "from-[#252532] to-[#2a2a35]"
+    if (theme === "light") return "from-gray-50 to-white border border-gray-200"
+    return "from-[#252532] to-[#2a2a35]"
+  }
+
+  const getIconColor = () => {
+    if (theme === "purple") return "text-purple-400"
+    if (theme === "light") return "text-blue-500"
+    return "text-emerald-400"
+  }
+
+  const getHeadingColor = () => {
+    if (theme === "purple") return "text-purple-400"
+    if (theme === "light") return "text-blue-600"
+    return "text-emerald-400"
+  }
+
   return (
     <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-sm uppercase tracking-wider text-emerald-400 mb-2">WHAT I CAN DO</h2>
+          <h2 className={`text-sm uppercase tracking-wider ${getHeadingColor()} mb-2`}>WHAT I CAN DO</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">My Skills</h3>
-          <p className="text-gray-300 mb-8">
+          <p className="text-foreground/80 mb-8">
             I've worked with a range of technologies in the web development world, from back-end to design.
           </p>
         </div>
@@ -58,51 +100,41 @@ export default function Skills() {
               <div className="space-y-2">
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${
-                    activeCategory === "all"
-                      ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white"
-                      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
-                  }`}
+                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${getButtonGradient(
+                    activeCategory === "all",
+                  )}`}
                 >
                   All Skills
                 </button>
                 <button
                   onClick={() => setActiveCategory("frontend")}
-                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${
-                    activeCategory === "frontend"
-                      ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white"
-                      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
-                  }`}
+                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${getButtonGradient(
+                    activeCategory === "frontend",
+                  )}`}
                 >
                   Frontend
                 </button>
                 <button
                   onClick={() => setActiveCategory("backend")}
-                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${
-                    activeCategory === "backend"
-                      ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white"
-                      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
-                  }`}
+                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${getButtonGradient(
+                    activeCategory === "backend",
+                  )}`}
                 >
                   Backend
                 </button>
                 <button
                   onClick={() => setActiveCategory("database")}
-                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${
-                    activeCategory === "database"
-                      ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white"
-                      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
-                  }`}
+                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${getButtonGradient(
+                    activeCategory === "database",
+                  )}`}
                 >
                   Database
                 </button>
                 <button
                   onClick={() => setActiveCategory("tools")}
-                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${
-                    activeCategory === "tools"
-                      ? "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white"
-                      : "bg-gradient-to-r from-[#1a1a24] to-[#252532] text-gray-300 hover:from-[#252532] hover:to-[#2a2a35]"
-                  }`}
+                  className={`w-full py-3 px-4 text-left rounded-lg transition-colors ${getButtonGradient(
+                    activeCategory === "tools",
+                  )}`}
                 >
                   Tools & Others
                 </button>
@@ -110,7 +142,7 @@ export default function Skills() {
             </div>
 
             <div className="w-full md:w-3/4">
-              <div className="bg-gradient-to-br from-[#1a1a24] to-[#252532] p-6 rounded-lg">
+              <div className={`bg-gradient-to-br ${getCardGradient()} p-6 rounded-lg`}>
                 <h4 className="text-xl font-bold mb-4">
                   {activeCategory === "all"
                     ? "All Skills"
@@ -125,7 +157,14 @@ export default function Skills() {
                 <div className="h-[300px] overflow-y-auto pr-2 custom-scrollbar">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     {filteredSkills.map((skill, index) => (
-                      <SkillCard key={index} name={skill.name} icon={skill.icon} index={index} />
+                      <SkillCard
+                        key={index}
+                        name={skill.name}
+                        icon={skill.icon}
+                        index={index}
+                        cardGradient={getSkillCardGradient()}
+                        iconColor={getIconColor()}
+                      />
                     ))}
                   </div>
                 </div>
@@ -138,10 +177,22 @@ export default function Skills() {
   )
 }
 
-function SkillCard({ name, icon, index }: { name: string; icon: string; index: number }) {
+function SkillCard({
+  name,
+  icon,
+  index,
+  cardGradient,
+  iconColor,
+}: {
+  name: string
+  icon: string
+  index: number
+  cardGradient: string
+  iconColor: string
+}) {
   return (
     <motion.div
-      className="bg-gradient-to-br from-[#252532] to-[#2a2a35] rounded-lg p-4 flex flex-col items-center justify-center hover:shadow-emerald-500/10 hover:shadow-lg transition-all duration-300"
+      className={`bg-gradient-to-br ${cardGradient} rounded-lg p-4 flex flex-col items-center justify-center hover:shadow-lg transition-all duration-300`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -156,7 +207,7 @@ function SkillCard({ name, icon, index }: { name: string; icon: string; index: n
       }}
     >
       <div className="w-12 h-12 flex items-center justify-center mb-3">
-        <i className={`${icon} text-3xl text-emerald-400`}></i>
+        <i className={`${icon} text-3xl ${iconColor}`}></i>
       </div>
       <h4 className="text-sm font-medium text-center">{name}</h4>
     </motion.div>

@@ -23,144 +23,161 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Codecanyon Project Customization",
-    description:
-      "Delivering customized solutions from the requirements of the client to codecanyon projects such as Rocket LMS, Xitance, etc.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "WorkOwl - Company base Custom Project Managment",
+    description: "Contributed to backend of a SaaS CRM product with REST APIs and frontend integration.",
+    image: "/projects/workowl/workowl_dashboard.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/workowl/workowl_dashboard.png?height=600&width=800",
+      "/projects/workowl/workowl_clients.png?height=600&width=800",
+      "/projects/workowl/workowl_projects.png?height=600&width=800",
+      "/projects/workowl/workowl_project_overview.png?height=600&width=800",
+      "/projects/workowl/workowl_task_table.png?height=600&width=800",
+      "/projects/workowl/workowl_task_details.png?height=600&width=800",
+      "/projects/workowl/workowl_task_kanban.png?height=600&width=800",
+      "/projects/workowl/workowl_chat.png?height=600&width=800",
     ],
-    tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "backend",
-    company: "Deligent Soft It",
-    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
+    tags: ["Laravel", "PHP", "API", "MySQL", "RESTful API", "React", "TypeScript"],
+    github: "#",
+    demo: "https://app.workowl.io/",
+    category: "fullstack",
+    company: "BlueFlower Media",
+    technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "React", "TypeScript"],
   },
   {
     id: 2,
-    title: "NGO Website Remake",
-    description: "Remake NGO Website from Wordpress to Laravel with improved functionality and performance.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "OrchidArchitect ERP - ERP System",
+    description: "Inventory and ERP software with customized solutions based on client requirements.",
+    image: "/projects/erp/erp_balance_sheet.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/erp/erp_balance_sheet.png?height=600&width=800",
+      "/projects/erp/erp_trial_balance.png?height=600&width=800",
+      "/projects/erp/erp_profit_loss.png?height=600&width=800",
+      "/projects/erp/erp_dashboard.png?height=600&width=800",
+      "/projects/erp/erp_attendance.png?height=600&width=800",
+      "/projects/erp/erp_leave.png?height=600&width=800",
+      "/projects/erp/erp_design_report_labour.png?height=600&width=800",
+      "/projects/erp/erp_project_deal.png?height=600&width=800",
+      "/projects/erp/erp_projects.png?height=600&width=800",
+      "/projects/erp/erp_user_role.png?height=600&width=800",
+      "/projects/erp/erp_user_permissions.png?height=600&width=800",
+      "/projects/erp/erp_purchase.png?height=600&width=800",
+      "/projects/erp/erp_purchase_list.png?height=600&width=800",
+      "/projects/erp/erp_purchase_report.png?height=600&width=800",
+      "/projects/erp/erp_sales.png?height=600&width=800",
+      "/projects/erp/erp_sales_list.png?height=600&width=800",
+      "/projects/erp/erp_lead_report.png?height=600&width=800",
     ],
-    tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    tags: ["Laravel", "PHP", "JavaScript", "MySQL", "Vue.js"],
+    github: "#",
+    demo: "https://erp.orchidarchitect.com/",
     category: "fullstack",
     company: "Deligent Soft It",
-    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
+    technologies: ["Laravel", "PHP", "MySQL", "Vue.js", "JavaScript", "jQuery", "Bootstrap"],
   },
   {
     id: 3,
-    title: "Online Student Supervision",
-    description: "University project for graduation certification, providing a platform for student supervision.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "Dejure Academy - Learning Management System",
+    description: "Custom LMS with course management, student tracking, and content delivery features.",
+    image: "/projects/dejure/dejure_home.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-    ],
-    tags: ["Laravel", "PHP", "Vue.js", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "fullstack",
-    company: "University Project",
-    technologies: ["Laravel", "PHP", "Vue.js", "MySQL", "Bootstrap"],
-  },
-  {
-    id: 4,
-    title: "SaaS CRM Backend",
-    description: "Contributed to backend of a SaaS CRM product with REST APIs and frontend integration.",
-    image: "/placeholder.svg?height=400&width=600",
-    screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-    ],
-    tags: ["Laravel", "PHP", "API", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "backend",
-    company: "BluePower Media",
-    technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "React"],
-  },
-  {
-    id: 5,
-    title: "ERP System",
-    description: "Inventory and ERP software with customized solutions based on client requirements.",
-    image: "/placeholder.svg?height=400&width=600",
-    screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/dejure/dejure_home.png?height=600&width=800",
+      "/projects/dejure/dejure_courses.png?height=600&width=800",
+      "/projects/dejure/dejure_instructor_dashboard.png?height=600&width=800",
+      "/projects/dejure/dejure_student_dashboard.png?height=600&width=800",
+      "/projects/dejure/dejure_super_admin_add_course.png?height=600&width=800",
+      "/projects/dejure/dejure_super_admin_course.png?height=600&width=800",
+      "/projects/dejure/dejure_user_permissions.png?height=600&width=800",
+      "/projects/dejure/dejure_user_role.png?height=600&width=800",
     ],
     tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
     github: "https://github.com",
-    demo: "https://demo.com",
-    category: "backend",
+    demo: "http://dejure.academy/",
+    category: "fullstack",
     company: "Deligent Soft It",
     technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
   },
   {
-    id: 6,
-    title: "Website Builder Backend",
-    description: "Backend for a website builder with premade templates to help developers build websites faster.",
-    image: "/placeholder.svg?height=400&width=600",
+    id: 4,
+    title: "DodoBazar - classified advertisement website",
+    description: "online marketplace, facilitating seamless buying and selling experiences without the need for physical marketplace visits",
+    image: "/projects/dodo/dodo_category.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/dodo/dodo_category.png?height=600&width=800",
+      "/projects/dodo/dodo_products.png?height=600&width=800",
+      "/projects/dodo/dodo_product_details.png?height=600&width=800",
+      "/projects/dodo/dodo_dashboard_category.png?height=600&width=800",
+      "/projects/dodo/dodo_dashboard_subcategory.png?height=600&width=800",
+    ],
+    tags: ["Laravel", "PHP", "Vue.js", "MySQL"],
+    github: "#",
+    demo: "https://www.dodobazar.com/",
+    category: "backend",
+    company: "Deligent Soft It",
+    technologies: ["Laravel", "PHP", "Vue.js", "MySQL", "Stripe", "Bootstrap"],
+  },
+  {
+    id: 5,
+    title: "Ezytor - Website Builder Backend",
+    description: "Backend for a website builder with premade templates to help developers build websites faster.",
+    image: "/projects/ezytor/ezytor_landing.png?height=400&width=600",
+    screenshots: [
+      "/projects/ezytor/ezytor_landing.png?height=600&width=800",
+      "/projects/ezytor/ezytor_builder.png?height=600&width=800",
+      "/projects/ezytor/ezytor_themes.png?height=600&width=800",
+      "/projects/ezytor/ezytor_templete.png?height=600&width=800",
+      "/projects/ezytor/ezytor_editor.png?height=600&width=800",
     ],
     tags: ["Laravel", "PHP", "API", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    github: "#",
+    demo: "https://ezytor.com",
     category: "backend",
     company: "UIHUT",
     technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "JavaScript"],
   },
   {
-    id: 7,
-    title: "E-commerce Platform",
-    description: "Full-featured e-commerce platform with product management, cart, and payment integration.",
-    image: "/placeholder.svg?height=400&width=600",
+    id: 5,
+    title: "FlowGiri - Website Builder Backend",
+    description: "Backend for a website builder with premade templates to help developers build websites faster.",
+    image: "/projects/flowgiri/flowgiri_landing.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/flowgiri/flowgiri_landing.png?height=600&width=800",
+      "/projects/flowgiri/flowgiri_theme.png?height=600&width=800",
+      "/projects/flowgiri/flowgiri_templates.png?height=600&width=800",
+      "/projects/flowgiri/flowgiri_to_webflow.png?height=600&width=800",
     ],
-    tags: ["Laravel", "PHP", "Vue.js", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "fullstack",
-    company: "Freelance Project",
-    technologies: ["Laravel", "PHP", "Vue.js", "MySQL", "Stripe", "Bootstrap"],
+    tags: ["Laravel", "PHP", "API", "MySQL"],
+    github: "#",
+    demo: "https://flowgiri.com/",
+    category: "backend",
+    company: "UIHUT",
+    technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "JavaScript"],
+  },
+  {
+    id: 6,
+    title: "Hisab - Financial Mobile App",
+    description: "Daily basis Financial Mobile App Fully Documented Rest Api with feature, functionality and performance.",
+    image: "/projects/hisab/hisab_home.png?height=400&width=600",
+    screenshots: [
+      "/projects/hisab/hisab_home.png?height=600&width=800",
+      "/projects/hisab/hisab_login.png?height=600&width=800",
+      "/projects/hisab/hisab_starter.png?height=600&width=800",
+      "/projects/hisab/hisab_add_expense.png?height=600&width=800",
+      "/projects/hisab/hisab_expense.png?height=600&width=800",
+      "/projects/hisab/hisab_add_income.png?height=600&width=800",
+      "/projects/hisab/hisab_history.png?height=600&width=800",
+      "/projects/hisab/hisab_profile.png?height=600&width=800",
+      "/projects/hisab/hisab_profile_edit.png?height=600&width=800",
+    ],
+    tags: ["Laravel", "PHP", "PostGree SQL", "RESTful API"],
+    github: "#",
+    demo: "#",
+    category: "backend",
+    company: "Deligent Soft It",
+    technologies: ["Laravel", "PHP", "PostGree SQL", "RESTful API"],
   },
   {
     id: 8,
-    title: "Learning Management System",
-    description: "Custom LMS with course management, student tracking, and content delivery features.",
-    image: "/placeholder.svg?height=400&width=600",
-    screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-    ],
-    tags: ["Laravel", "PHP", "JavaScript", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "backend",
-    company: "Educational Institution",
-    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
-  },
-  {
-    id: 9,
-    title: "Real Estate Management",
+    title: "HomieLiving - Real Estate Management(Ecommerce Feature)",
     description: "Property listing and management system with advanced search and filtering capabilities.",
     image: "/placeholder.svg?height=400&width=600",
     screenshots: [
@@ -168,13 +185,13 @@ const projects: Project[] = [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
     ],
-    tags: ["Laravel", "PHP", "Vue.js", "MySQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    category: "fullstack",
-    company: "Real Estate Agency",
-    technologies: ["Laravel", "PHP", "Vue.js", "MySQL", "Google Maps API", "Tailwind CSS"],
-  },
+    tags: ["Vue.js", "Tailwind CSS", "Ant Dsign"],
+    github: "#",
+    demo: "https://www.homeiliving.com/",
+    category: "frontend",
+    company: "BlueFlower Media",
+    technologies: ["Vue.js", "Tailwind CSS", "Ant Dsign"],
+  }
 ]
 
 export default function Projects() {
@@ -219,7 +236,7 @@ export default function Projects() {
           <h3 className="text-4xl md:text-5xl font-bold mb-6">Projects.</h3>
           <p className="text-foreground/80 mb-8">
             Following projects showcase my skills and experience through real-world examples of my work. Each project is
-            briefly described with links to code repositories and live demos.
+            briefly described with links to code repositories and live links.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -384,7 +401,7 @@ function ProjectCard({
             className={`flex items-center gap-1 text-sm text-foreground/70 hover:${getLinkColor()} transition-colors`}
           >
             <ExternalLink size={16} />
-            <span>Demo</span>
+            <span>Link</span>
           </a>
         </div>
       </div>
@@ -455,7 +472,7 @@ function ProjectModal({
                 src={project.screenshots[activeScreenshot] || "/placeholder.svg"}
                 alt={`${project.title} screenshot ${activeScreenshot + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 800px"
               />
             </div>
@@ -511,7 +528,7 @@ function ProjectModal({
                   className={`bg-gradient-to-r ${getSecondaryButtonGradient()} text-foreground px-4 py-2 rounded-md flex items-center gap-2 transition-colors`}
                 >
                   <ExternalLink size={16} />
-                  <span>Live Demo</span>
+                  <span>Live Link</span>
                 </a>
               </div>
             </div>

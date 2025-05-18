@@ -10,6 +10,7 @@ import { useTheme } from "@/context/theme-context"
 
 export default function About() {
   const { theme } = useTheme()
+  const  html5  = "@/public/icons/html5.png"
 
   const getGradient = () => {
     if (theme === "purple") return "from-purple-500/20 to-pink-500/20"
@@ -42,7 +43,7 @@ export default function About() {
             title="Web Developer"
             description="Developing robust and scalable web applications using PHP, Laravel, and modern web technologies."
             icon={<Layout className={getTextColor()} />}
-            iconSrc="/icons/html5.png"
+            iconSrc={`${html5}`}
           />
 
           <OverviewCard
@@ -115,22 +116,7 @@ function OverviewCard({ title, description, icon, iconSrc }: OverviewCardProps) 
         <h4 className="text-xl font-bold mb-2">{title}</h4>
         <p className="text-foreground/70">{description}</p>
       </div>
-
-      {/* 3D Model or Icon */}
-      <div
-        className={`absolute top-5 right-5 w-20 h-20 opacity-20 transition-all duration-500 ${
-          isHovered ? "opacity-60 scale-125" : ""
-        }`}
-      >
-        <Image
-          src={iconSrc || "/placeholder.svg"}
-          alt={title}
-          width={80}
-          height={80}
-          className="object-contain"
-          priority
-        />
-      </div>
+      
     </motion.div>
   )
 }

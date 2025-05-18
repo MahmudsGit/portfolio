@@ -91,20 +91,20 @@ export default function Education() {
           <div className={`relative border-l ${getLineColor()} pl-8 ml-4`}>
             {/* Timeline dots and lines are rendered here */}
             <div
-              className={`absolute left-0 top-0 w-3 h-3 rounded-full ${getDotColor()} transform -translate-x-1.5`}
+              className={`absolute left-1 top-0 w-1 h-8 rounded-full ${getDotColor()} transform -translate-x-1.5`}
             ></div>
             <div
-              className={`absolute left-0 top-1/3 w-3 h-3 rounded-full ${getDotColor()} transform -translate-x-1.5`}
+              className={`absolute left-1 top-1/3 w-1 h-8 rounded-full ${getDotColor()} transform -translate-x-1.5`}
             ></div>
             <div
-              className={`absolute left-0 top-2/3 w-3 h-3 rounded-full ${getDotColor()} transform -translate-x-1.5`}
+              className={`absolute left-1 top-2/3 w-1 h-8 rounded-full ${getDotColor()} transform -translate-x-1.5`}
             ></div>
 
             {/* Education items */}
             <TimelineItem
               title="BACHELOR OF SCIENCE"
               institution="European University of Bangladesh, Gabtoli, Dhaka"
-              description="Computer Science & Engineering - 3.42 Out of 4"
+              description="Computer Science & Engineering"
               year="2021"
             />
 
@@ -119,7 +119,7 @@ export default function Education() {
               title="Web App Development PHP Training"
               institution="BASIS Institute of Technology & Management (BITM)"
               description="Completed a Training Program on Web App Development PHP"
-              year="2022"
+              year="2019"
             />
           </div>
         </div>

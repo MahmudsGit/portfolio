@@ -51,11 +51,11 @@ function TimelineItem({ title, company, date, description, icon, isLeft }: Timel
         visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
       }}
     >
-      <div className={`w-1/2 ${isLeft ? "pl-8" : "pr-8"} ${isLeft ? "text-right" : "text-left"}`}>
-        <div className={`flex items-center mb-2 ${isLeft ? "justify-end" : "justify-start"}`}>
+      <div className={`w-1/2 ${isLeft ? "pl-8" : "pr-8"} text-left`}>
+        <div className={`flex items-center mb-2 justify-start`}>
           <h4 className={`text-xl font-bold ${getTextColor()}`}>{title}</h4>
         </div>
-        <div className={`flex items-center mb-4 ${isLeft ? "justify-end" : "justify-start"}`}>
+        <div className={`flex items-center mb-4 justify-start`}>
           <span className={getAccentColor()}>{company}</span>
           <span className="mx-2 text-gray-500">•</span>
           <span className={getSecondaryTextColor()}>{date}</span>
@@ -63,13 +63,12 @@ function TimelineItem({ title, company, date, description, icon, isLeft }: Timel
         <ul className="space-y-2">
           {description.map((item, index) => (
             <li
-              key={index}
-              className={`text-foreground/80 flex items-start ${isLeft ? "justify-end" : "justify-start"}`}
-            >
-              {isLeft && <span>{item}</span>}
-              <span className={`${getAccentColor()} mx-2`}>•</span>
-              {!isLeft && <span>{item}</span>}
-            </li>
+            key={index}
+            className="text-foreground/80 flex items-start justify-start"
+          >
+            <span className={`${getAccentColor()} mr-2`}>•</span>
+            <span>{item}</span>
+          </li>
           ))}
         </ul>
       </div>
@@ -113,13 +112,13 @@ export default function Experience() {
 
             {/* Timeline dots */}
             <div
-              className={`absolute left-1/2 top-0 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+              className={`absolute left-1/2 top-0 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
             <div
-              className={`absolute left-1/2 top-1/3 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+              className={`absolute left-1/2 top-1/3 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
             <div
-              className={`absolute left-1/2 top-2/3 w-5 h-5 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+              className={`absolute left-1/2 top-2/3 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
 
             {/* Experience items */}
@@ -151,7 +150,7 @@ export default function Experience() {
               company="UIHUT"
               date="Jun 05, 2022 - Feb 28, 2023"
               description={[
-                "Built the Backend of the various Applications using Laravel. Such as website builder Extor (premade html templates) and Flowbri (premade webflow templates), both are premium SaaS product that helps developers to build websites faster without concerning the design so that he/she can focus on the functions.",
+                "Built the Backend of the various Applications using Laravel. Such as website builder named Ezytor (premade html templates) and Flowbri (premade webflow templates), both are premium SaaS product that helps developers to build websites faster without concerning the design so that he/she can focus on the functions.",
                 "Therewithal I've Worked with Wordpress addons Development for an upcoming Addons of Elementor Named Angel Addons.",
               ]}
               icon="https://placeholder.svg?height=50&width=50"

@@ -104,7 +104,7 @@ export default function Navbar() {
                 : "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
           }`}
         >
-          Hire me
+          Contact me
         </Link>
 
         <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
@@ -148,7 +148,7 @@ export default function Navbar() {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Hire me
+              Contact me
             </Link>
           </nav>
         </div>

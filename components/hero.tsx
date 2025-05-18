@@ -121,10 +121,11 @@ export default function Hero() {
                 View Projects
               </Link>
               <Link
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1MuJpV0Y8e6ux75uVwPaIYlj0LA6FxmCx/view?usp=sharing"
                 download
                 className={`flex items-center justify-center h-12 w-12 rounded-full border ${getSecondaryButtonBorder()} text-foreground font-medium transition-colors`}
                 title="Download Resume"
+                target="blank"
               >
                 <Download size={20} />
               </Link>

@@ -177,20 +177,20 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    title: "HomieLiving - Real Estate Management(Ecommerce Feature)",
-    description: "Property listing and management system with advanced search and filtering capabilities.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "TaskGlance - Business Operating System",
+    description: "Tool that represents platforms to handle all aspects of running a business.",
+    image: "/projects/taskglance/taskglance_dashboard_overview.png?height=400&width=600",
     screenshots: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/projects/taskglance/taskglance_dashboard_overview.png?height=600&width=800",
+      "/projects/taskglance/taskglance_dashboard_projects.png?height=600&width=800",
+      "/projects/taskglance/taskglance_dashboard_team.png?height=600&width=800",
     ],
-    tags: ["Vue.js", "Tailwind CSS", "Ant Dsign"],
+    tags: ["Laravel", "PHP", "PostGree SQL", "RESTful API", "react.js", "next.js", "Tailwind CSS", "Ant Dsign"],
     github: "#",
     demo: "https://www.homeiliving.com/",
     category: "frontend",
     company: "BlueFlower Media",
-    technologies: ["Vue.js", "Tailwind CSS", "Ant Dsign"],
+    technologies: ["Laravel", "PHP", "PostGree SQL", "RESTful API", "react.js", "next.js", "Tailwind CSS", "Ant Design"],
   }
 ]
 

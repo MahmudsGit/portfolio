@@ -115,10 +115,10 @@ export default function Experience() {
               className={`absolute left-1/2 top-0 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
             <div
-              className={`absolute left-1/2 top-1/3 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+              className={`absolute left-1/2 top-2/4 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
             <div
-              className={`absolute left-1/2 top-2/3 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
+              className={`absolute left-1/2 top-3/4 w-3 h-12 rounded-full ${getDotColor()} transform -translate-x-1/2 z-10`}
             ></div>
 
             {/* Experience items */}
@@ -127,7 +127,11 @@ export default function Experience() {
               company="BluePower Media"
               date="Jun 7, 2024 - Present"
               description={[
-                "Contributed to their backend of an SaaS CRM product, creating well-documented REST APIs and implementing integration into frontend using react, and delivering highly scalable and maintainable web solutions.",
+                "Developed and documented RESTful APIs and integrated third-party services, including SMS, Email, Zoom meeting, payment gateway APIs, etc.",
+                "Worked on both backend and frontend of a SaaS Project Management System, delivering scalable, maintainable and efficient web solutions.",
+                "Implemented React-based SPA with API integration for smooth interaction and efficient data handling.",
+                "Utilized Jira for sprint planning, task tracking, and team collaboration in Agile environments.",
+                "Led 2 junior developers with mentoring, technical guidance, and task delegation for timely, quality delivery.",
               ]}
               icon="https://placeholder.svg?height=50&width=50"
               isLeft={false}
@@ -138,8 +142,9 @@ export default function Experience() {
               company="Deligent Soft It"
               date="Mar 10, 2023 - May 4, 2024"
               description={[
-                "Contributed to various projects, including ERP and inventory software, by analyzing client requirements, utilizing Laravel's REST API integration, and delivering customized solutions.",
-                "Collaborated with clients, develop efficient systems, ensuring seamless communication and optimized data management for enhanced productivity.",
+                "Contributed to various projects, including customized ERP and Inventory software, by analyzing client requirements, real-time features, and delivering customized solutions.",
+                "Refactored outdated codebases, enhancing system performance and maintainability by up to 30%.",
+                "Collaborated with clients, developed efficient systems, ensuring seamless communication and optimized data management for enhanced productivity.",
               ]}
               icon="https://placeholder.svg?height=50&width=50"
               isLeft={true}
@@ -150,8 +155,8 @@ export default function Experience() {
               company="UIHUT"
               date="Jun 05, 2022 - Feb 28, 2023"
               description={[
-                "Built the Backend of the various Applications using Laravel. Such as website builder named Ezytor (premade html templates) and Flowbri (premade webflow templates), both are premium SaaS product that helps developers to build websites faster without concerning the design so that he/she can focus on the functions.",
-                "Therewithal I've Worked with Wordpress addons Development for an upcoming Addons of Elementor Named Angel Addons.",
+                "Built the backend of various premium SaaS products, including website builders using premade HTML and Webflow templates, developed with Laravel.",
+                "Worked with WordPress and contributed to developing a new Elementor addon named Angel Addons.",
               ]}
               icon="https://placeholder.svg?height=50&width=50"
               isLeft={false}

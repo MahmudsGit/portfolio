@@ -135,7 +135,7 @@ const projects: Project[] = [
     technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "JavaScript"],
   },
   {
-    id: 5,
+    id: 6,
     title: "FlowGiri - Website Builder Backend",
     description: "Backend for a website builder with premade templates to help developers build websites faster.",
     image: "/projects/flowgiri/flowgiri_landing.png?height=400&width=600",
@@ -153,7 +153,7 @@ const projects: Project[] = [
     technologies: ["Laravel", "PHP", "MySQL", "RESTful API", "JavaScript"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Hisab - Financial Mobile App",
     description: "Daily basis Financial Mobile App Fully Documented Rest Api with feature, functionality and performance.",
     image: "/projects/hisab/hisab_home.png?height=400&width=600",

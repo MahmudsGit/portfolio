@@ -132,21 +132,21 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-4 pt-4">
               <Link
-                href="https://github.com"
+                href="https://github.com/MahmudsGit"
                 target="_blank"
                 className={`w-10 h-10 rounded-full flex items-center justify-center border ${getSecondaryButtonBorder()} transition-colors`}
               >
                 <Github size={18} />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/golammahmud/"
                 target="_blank"
                 className={`w-10 h-10 rounded-full flex items-center justify-center border ${getSecondaryButtonBorder()} transition-colors`}
               >
                 <Linkedin size={18} />
               </Link>
               <Link
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1MuJpV0Y8e6ux75uVwPaIYlj0LA6FxmCx/view?usp=sharing"
                 target="_blank"
                 className={`w-10 h-10 rounded-full flex items-center justify-center border ${getSecondaryButtonBorder()} transition-colors`}
               >

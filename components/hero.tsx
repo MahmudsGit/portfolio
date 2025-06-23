@@ -121,7 +121,7 @@ export default function Hero() {
                 View Projects
               </Link>
               <Link
-                href="https://drive.google.com/file/d/1MuJpV0Y8e6ux75uVwPaIYlj0LA6FxmCx/view?usp=sharing"
+                href="https://drive.google.com/file/d/1WT0qbPeA5uvNrjWYXhjMb5cj2kcDiQVi/view?usp=sharing"
                 download
                 className={`flex items-center justify-center h-12 w-12 rounded-full border ${getSecondaryButtonBorder()} text-foreground font-medium transition-colors`}
                 title="Download Resume"
@@ -146,7 +146,7 @@ export default function Hero() {
                 <Linkedin size={18} />
               </Link>
               <Link
-                href="https://drive.google.com/file/d/1MuJpV0Y8e6ux75uVwPaIYlj0LA6FxmCx/view?usp=sharing"
+                href="https://drive.google.com/file/d/1WT0qbPeA5uvNrjWYXhjMb5cj2kcDiQVi/view?usp=sharing"
                 target="_blank"
                 className={`w-10 h-10 rounded-full flex items-center justify-center border ${getSecondaryButtonBorder()} transition-colors`}
               >

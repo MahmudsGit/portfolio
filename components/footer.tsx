@@ -52,11 +52,11 @@ export default function Footer() {
               efficient web applications.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="https://github.com" target="_blank" className={getLinkColor()}>
+              <Link href="https://github.com/MahmudsGit" target="_blank" className={getLinkColor()}>
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://linkedin.com" target="_blank" className={getLinkColor()}>
+              <Link href="https://www.linkedin.com/in/golammahmud/" target="_blank" className={getLinkColor()}>
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </Link>
